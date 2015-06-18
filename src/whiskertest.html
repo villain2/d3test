@@ -1,0 +1,102 @@
+<!doctype html>
+<meta charset="utf-8">
+
+<script src="../bower_components/modernizr/modernizr.js"></script>
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/foundation/js/foundation.js"></script>
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="../bower_components/angular-route/angular-route.min.js"></script>
+<script src="../bower_components/angular-scroll/angular-scroll.min.js"></script>
+<script src="../bower_components/d3/d3.js"></script>
+<script src="../bower_components/c3/c3.min.js"></script>
+<script src="../bower_components/d3plus/d3plus.js"></script>
+
+<script src="image_and_mapping.js"></script>
+<style>
+    line {
+        stroke: black;
+        stroke-width: 1px;
+    }
+</style>
+
+<!--<link href="../bower_components/foundation/css/foundation.css" type="text/css" rel="stylesheet">-->
+<link href="../bower_components/c3/c3.min.css" type="text/css" rel="stylesheet">
+<link href="css/styles.css" type="text/html" rel="stylesheet">
+
+<div class="row fullWidth" heightsource>
+    <div class="small-12 medium-3 columns leftStatic" heighttarget>
+        <figure>
+            <img src="../src/img/icons/coordinate.png" alt="Graphs Icon" />
+        </figure>
+
+        <div class="pageSubNav">
+            <ul class="custom-side-nav" role="navigation" title="Side nav">
+                <li role="menuitem"><a href="#section-1" du-smooth-scroll duration ="1250">Plot Points</a></li>
+                <li role="menuitem"><a href="#section-2" du-smooth-scroll duration="1250">Draw Rays and Segments</a></li>
+                <li role="menuitem"><a href="#section-3" du-smooth-scroll duration="1250">Manipulate Shapes</a></li>
+                <li role="menuitem"><a href="#section-4" du-smooth-scroll duration="1250">Chart By Equations</a></li>
+                <li role="menuitem"><a href="#section-5" du-smooth-scroll duration="1250">Scatter Plots</a></li>
+                <li role="menuitem"><a href="#section-6" du-smooth-scroll duration="1250">Bar Graph</a></li>
+                <li role="menuitem"><a href="#section-7" du-smooth-scroll duration="1250">Box Whisker</a> </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="small-12 medium-9 columns innerMain">
+        <!-- GRID EXAMPLES IN ORDER -->
+
+
+        <section class="concrete" id="section-1">
+        </section>
+
+
+<div id="viz"></div>
+
+    </div>
+</div>
+
+<script>
+    $(document).foundation();
+</script>
+
+<!--<script type="text/javascript" src="http://10.3.17.158:8080/s/d41d8cd98f00b204e9800998ecf8427e/en_US-gy6a86-1988229788/6260/5/1.4.7/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?collectorId=3e5300ae"></script>-->
+</body>
+</html>
+
+<script>
+
+    var data = [
+        {"year": 1991, "name":"alpha", "value": 15},
+        {"year": 1992, "name":"alpha", "value": 34},
+        {"year": 1991, "name":"alpha2", "value": 17},
+        {"year": 1992, "name":"alpha2", "value": 65},
+        {"year": 1991, "name":"beta", "value": 10},
+        {"year": 1992, "name":"beta", "value": 10},
+        {"year": 1991, "name":"beta2", "value": 40},
+        {"year": 1992, "name":"beta2", "value": 38},
+        {"year": 1991, "name":"gamma", "value": 5},
+        {"year": 1992, "name":"gamma", "value": 10},
+        {"year": 1991, "name":"gamma2", "value": 20},
+        {"year": 1992, "name":"gamma2", "value": 34},
+        {"year": 1991, "name":"delta", "value": 50},
+        {"year": 1992, "name":"delta", "value": 43},
+        {"year": 1991, "name":"delta2", "value": 17},
+        {"year": 1992, "name":"delta2", "value": 35}
+    ]
+
+    var visualization = d3plus.viz()
+            .container("#viz")
+            .data(data)
+            .type("box")
+            .id("name")
+            .x("year")
+            .y("value")
+            .time("year")
+            .ui([{
+                "label": "Visualization Type",
+                "method": "type",
+                "value": ["scatter","box"]
+            }])
+            .draw()
+
+</script>

@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'AntonioRegular';
+  src: url('../fonts/Antonio-Regular-webfont.eot');
+  src: local('☺'), url('../fonts/Antonio-Regular-webfont.woff') format('woff'), url('../fonts/Antonio-Regular-webfont.ttf') format('truetype'), url('../fonts/Antonio-Regular-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AntonioBold';
+  src: url('../fonts/Antonio-Bold-webfont.eot');
+  src: local('☺'), url('../fonts/Antonio-Bold-webfont.woff') format('woff'), url('../fonts/Antonio-Bold-webfont.ttf') format('truetype'), url('../fonts/Antonio-Bold-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AntonioLight';
+  src: url('../fonts/Antonio-Light-webfont.eot');
+  src: local('☺'), url('../fonts/Antonio-Light-webfont.woff') format('woff'), url('../fonts/Antonio-Light-webfont.ttf') format('truetype'), url('../fonts/Antonio-Light-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpensSansRegular';
+    src: url('../fonts/OpenSans-Regular-webfont.eot');
+    src: local('☺'), url('../fonts/OpenSans-Regular-webfont.woff') format('woff'), url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Regular-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin fText ($fontFamily, $fontSize, $fontWeight, $fontColor)
+{
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  color: $fontColor;
+}
+
+@mixin fHeader ($fontSize, $fontWeight, $padding, $margin) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  padding: $padding;
+  margin: $margin;
+}

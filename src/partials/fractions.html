@@ -1,0 +1,61 @@
+<div class="row fullWidth" heightsource>
+    <div class="small-12 medium-3 columns leftStatic" heighttarget>
+        <figure>
+            <img src="../src/img/icons/fractions.png" alt="Fractions Icon" />
+        </figure>
+
+        <div class="pageSubNav">
+            <ul class="custom-side-nav" role="navigation" title="Side nav">
+                <li role="menuitem"><a href="#section-1" du-smooth-scroll duration ="1250">Circle</a></li>
+                <li role="menuitem"><a href="#section-2" du-smooth-scroll duration ="1250">Square</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="small-12 medium-9 columns innerMain">
+        <!-- GRID EXAMPLES IN ORDER -->
+
+
+        <section class="darkMatter" id="section-1">
+            <pie-chart>
+                <h1 class="lighter">Fractions <span class="red">Circle</span></h1>
+                <div class="pieChart" id="pieChart"></div>
+            </pie-chart>
+            <!-- <fractions type="0" slices="6">
+                <h1 class="lighter">Fractions <span class="red">Circle</span></h1>
+
+                <p><strong>Instructions:</strong> Use clock to shade areas, set hours, minutes and seconds.</p>
+
+                <div class="row">
+                    <div class="small-12 medium-8 columns">
+                        <div class="fractionsContainer" id="fractionsContainer"></div>
+                    </div>
+
+                    <div class="small-12 medium-4 columns">
+
+                    </div>
+                </div>
+            </fractions> -->
+        </section>
+
+
+        <section class="norwegian" id="section-2">
+            <fractions type="1" slices="4">
+                <h1>Fractions <span class="red">Square</span></h1>
+
+                <p><strong>Instructions:</strong> Click on a block to shade it and export fractional value.</p>
+
+                <div class="row">
+                    <div class="small-12 medium-8 columns">
+                        <div class="fractionsContainer" id="fractionsContainer"></div>
+                    </div>
+
+                    <div class="small-12 medium-4 columns">
+                        Current Fraction: <span>{{fraction}}</span>
+                    </div>
+                </div>
+            </fractions>
+        </section>
+
+    </div>
+</div>

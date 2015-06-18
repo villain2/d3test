@@ -1,0 +1,51 @@
+{
+  "columns": [
+    {
+      "id": 0,
+      "title": "Yes"
+    },
+    {
+      "id": 1,
+      "title": "No"
+    }
+  ],
+  "rows": [
+    {
+      "id": 0,
+      "value": 2,
+      "answers": [
+        {
+          "0": true,
+          "1": false
+        }
+      ]
+    },{
+      "id": 1,
+      "value": 7,
+      "answers": [
+        {
+          "0": false,
+          "1": true
+        }
+      ]
+    },{
+      "id": 2,
+      "value": -2,
+      "answers": [
+        {
+          "0": false,
+          "1": false
+        }
+      ]
+    },{
+      "id": 3,
+      "value": -7,
+      "answers": [
+        {
+          "0": true,
+          "1": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+	<title>Image Drawing and Mapping Tool</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<script src="../bower_components/modernizr/modernizr.js"></script>
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../bower_components/foundation/js/foundation.js"></script>
+	<script src="../bower_components/angular/angular.min.js"></script>
+	<script src="../bower_components/angular-route/angular-route.min.js"></script>
+	<script src="../bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="../bower_components/angular-scroll/angular-scroll.min.js"></script>
+    <script src="../bower_components/d3/d3.js"></script>
+    <script src="../bower_components/c3/c3.min.js"></script>
+    <script src="../bower_components/d3plus/d3plus.full.min.js"></script>
+	<!-- <script src="js/d3Tutorial.js"></script> -->
+	<!--<script src="js/d3DataBinding.js"></script>-->
+	<!--<script src="js/d3Transitions.js"></script>-->
+	<!--<script src="js/d3ExternalData.js"></script>-->
+	<!--<script src="js/d3Paths.js"></script>-->
+	<!--<script src="js/d3Arcs.js"></script>-->
+	<!-- <script src="js/Main.js"></script>-->
+	<!--<script src="js/TreeLayout.js"></script>-->
+
+    <script src="image_and_mapping.js"></script>
+    <style>
+        line {
+            stroke: black;
+            stroke-width: 1px;
+        }
+    </style>
+
+	<!--<link href="../bower_components/foundation/css/foundation.css" type="text/css" rel="stylesheet">-->
+    <link href="../bower_components/c3/c3.min.css" type="text/css" rel="stylesheet">
+	<link href="css/styles.css" type="text/html" rel="stylesheet">
+</head>
+
+<!--
+
+<body>
+	<script>
+		$(document).ready(function ()
+		{
+			D3Tut.init();
+		});
+
+	</script>
+</body>
+-->
+
+
+ <body tabindex="-1" data-ng-app="d3test">
+
+    <div class="container-to-grid stick">
+        <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on:large">
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="#/">Image Drawing and Mapping Tool</a></h1>
+                </li>
+                <li class="toggle-topbar menu-icon"><span>Menu</span></li>
+            </ul>
+
+            <section class="top-bar-section" navigation>
+                <ul class="left">
+                    <li class="{{currentPage == 'graphs' ? 'current' : ''}}"><a href="#/graphs" title="Graphs">Graphs</a></li>
+                    <li class="{{currentPage == 'number_lines' ? 'current' : ''}}"><a href="#/number-lines" title="Number Lines">Number Lines</a></li>
+                    <li class="{{currentPage == 'charts' ? 'current' : ''}}"><a href="#/charts" title="Charts">Charts</a></li>
+                    <li class="{{currentPage == 'geometry' ? 'current' : ''}}"><a href="#/geometry" title="Geometry">Geometry</a></li>
+                    <li class="{{currentPage == 'time' ? 'current' : ''}}"><a href="#/time" title="Time">Time</a></li>
+                    <li class="{{currentPage == 'temperature' ? 'current' : ''}}"><a href="#/temperature" title="Temperature">Temperature</a></li>
+                    <li class="{{currentPage == 'fractions' ? 'current' : ''}}"><a href="#/fractions" title="Fractions">Fractions</a></li>
+                    <!--<li class="{{currentPage == 'probability' ? 'current' : ''}}"><a href="#/probability" title="Probability">Probability</a></li>-->
+                </ul>
+            </section>
+        </nav>
+    </div>
+	<div class="mainContainer" id="mainContainer">
+		<div id="d3test" data-ng-view></div>
+	</div>
+
+    <script>
+        $(document).foundation();
+    </script>
+     
+     <!--<script type="text/javascript" src="http://10.3.17.158:8080/s/d41d8cd98f00b204e9800998ecf8427e/en_US-gy6a86-1988229788/6260/5/1.4.7/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?collectorId=3e5300ae"></script>-->
+</body>
+</html>

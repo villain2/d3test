@@ -1,0 +1,70 @@
+
+
+<div class="row fullWidth">
+    <div class="small-12 medium-3 columns leftStatic" heighttarget>
+        <figure>
+            <img src="../src/img/icons/number-line.jpg" alt="Graphs Icon" />
+        </figure>
+
+        <div class="pageSubNav">
+            <ul class="custom-side-nav" role="navigation" title="Side nav">
+                <li role="menuitem"><a href="#section-1" du-smooth-scroll duration="1250">Number Line Basic</a></li>
+                <!--<li role="menuitem"><a href="#section-2" du-smooth-scroll duration="1250">Timeline</a></li>-->
+            </ul>
+        </div>
+    </div>
+
+    <div class="small-12 medium-9 columns innerMain">
+        <section id="section-1" class="concrete">
+            <numberline>
+                <h1>Number Lines <span class="red">Basic Line Chart</span></h1>
+                <p>Select a segment or ray type. Click on a point of the number line and then drag to the end position to draw a new line.</p>
+
+                <div class="row">
+                    <div class="small-12 medium-8 columns">
+                        <div id="numberline" class="numberline" style="position: relative; width: 974px; height: 624px;"></div>
+                    </div>
+
+                    <div class="small-12 medium-4 columns">
+                        <div role="button" class="button small radius" data-ng-click="setLineType('segment', '0')">Closed Segment</div>
+                        <div role="button" class="button small radius" data-ng-click="setLineType('segment', '1')">Open End Segment</div>
+                        <div role="button" class="button small radius" data-ng-click="setLineType('segment', '2')">Closed End Segment</div>
+                        <div role="button" class="button small radius" data-ng-click="setLineType('segment', '3')">Open Segment</div>
+
+                        <div role="button" class="button small radius" data-ng-click="setLineType('ray', 0)">Closed Ray</div>
+                        <div role="button" class="button small radius" data-ng-click="setLineType('ray', 3)">Open Ray</div>
+                        
+                        <br />
+                        <div role="button" class="button small radius" data-ng-click="toggleLabeling()" data-ng-class="addLabel ? 'alert' : ''">Add A Label</div>
+                        <input data-ng-class="addLabel ? 'active' : 'hidden'" placeholder="Label for this mark" data-ng-model="timelineLabel" /> 
+                        <br>
+                        <span class="instruction" data-ng-class="addLabel ? 'active' : 'hidden'">Click on the timeline to add a label to the timeline.</span>
+                        <!--<div role="button" class="button radius" data-ng-click="makeLabel()" data-ng-class="addLabel ? 'active' : 'hidden' ">Submit</div>-->
+                        
+                        <hr>
+                        <div role="button" class="button large alert expand" data-ng-click="resetAll()">Reset All</div>
+                    </div>
+                </div>
+            </numberline>
+        </section>
+
+        <!--<section id="section-2" class="darkMatter">
+            <timeline>
+                <h1 class="lighter">Number Lines <span class="red">Timeline</span></h1>
+                <p> instructions go here </p>
+
+                <div class="row">
+                    <div class="small-12 medium-8 columns">
+                        <div id="timeline" class="numberline"></div>
+                    </div>
+
+                    <div class="small-12 medium-4 columns">
+                        
+                    </div>
+                </div>
+            </timeline>
+        </section>-->
+    </div>
+
+
+</div>

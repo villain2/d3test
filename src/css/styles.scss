@@ -1,0 +1,468 @@
+
+@import '../../bower_components/foundation/scss/foundation';
+@import 'fonts';
+@import 'hovers';
+@import 'drawingContainer';
+@import 'foundationCustom';
+@import 'mediaqueries';
+
+
+
+.custom-side-nav {
+    @include side-nav(
+        $divider-color: '#d81e05',
+        $font-size: 1.25em,
+        $link-color: #5F4A6E,
+        $link-color-hover: #f3f4f5
+        );
+    li {
+        font-family: 'OpensSansRegular', sans-serif;
+        @include tTransition;
+        border-bottom: 1px dotted #333;
+        &:hover {
+            @include tTransition;
+            background: #3044b5;
+            color: black;
+        }
+    }
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: Arial, Tahoma, sans-serif;
+}
+
+input[type="text"] {
+    padding: 8px;
+    &.active {
+        font-size: 30px;
+    }
+}
+
+input {
+    &.active {
+        padding: 20px;
+        visibility: visible;
+    }
+    
+    &.hidden {
+        visibility: hidden;
+    }
+}
+
+input.singleNumber {
+    width: 60px;
+    text-align: center;
+}
+
+.button {
+    background: #000;
+    border-color: #989898;
+    color: #f3f3f3;
+    &:hover {
+        @include tTransition;
+        background: #676767;
+        border: #333;
+    }
+}
+        
+
+.button, span {
+    &.hidden {
+        visibility: hidden;
+    }
+}
+
+h1, h2, h3, h4, h5 {
+  padding: 0 0 20px 0;
+  margin: 0;
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  text-shadow: 0 5px 2px rgba(0,0,0,.3);
+  letter-spacing: -1px;
+  @include fHeader('5.125em', 'normal', '20px 0', '0');
+
+  .red {
+    color: #d81e05;
+    font-size: 1.02em;
+    text-shadow: 2px 2px #121212;
+    font-weight: normal;
+  }
+
+  .white {
+    color: #ffffff;
+  }
+
+  &.lighter {
+    color: #F1F2F3;
+  }
+}
+
+h2 {
+  @include fHeader(1.035em, 'normal', '10px 0', '0');
+    letter-spacing: 0px;
+    text-transform: none;
+}
+
+path.link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+circle {
+  fill: #000;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+text {
+  fill: #000;
+  font: 10px sans-serif;
+  pointer-events: none;
+}
+
+.mainContainer {
+  height: 100%;
+  padding-top: 45px;
+  margin-top: -45px;
+    #d3test {
+        height: 100%;
+    }
+
+    .fullWidth {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: initial;
+        height: 100%;
+    }
+
+    .leftStatic {
+        display: block;
+        background: #000;
+        height: 100%;
+        figure {
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .answerField {
+      background: white;
+      padding: 8px;
+      color: #656565;
+      margin: 0 0 12px 0;
+    }
+
+  .answerText {
+    @include fText(AntonioBold, 2em, 'bold', #d81e05);
+    text-transform: uppercase;
+  }
+
+    .innerMain {
+        background: #f3f4f5;
+        color: #000;
+        height: 100%;
+        padding: 0;
+        .instruction {
+          font-style: italic;
+          font-size: 0.8em;
+        }
+        .geometrycirc {
+          font-family: monospace, sans-serif;
+        }
+        .d3Container, .drawingContainer, .raycoor, .graphShapes, .graphEquations {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .scatterPlots, .barGraph, .boxWhisker {
+
+        }
+        section {
+          padding: 30px;
+          &.concrete {
+            background: url("../img/backgrounds/concrete_seamless.png") repeat 0 0;
+          }
+          &.honeycomb {
+            background: url("../img/backgrounds/honey_im_subtle.png") repeat 0 0;
+          }
+          &.norwegian {
+            background: url("../img/backgrounds/norwegian_rose.png") repeat 0 0;
+          }
+          &.darkMatter {
+            background: url("../img/backgrounds/dark_matter.png") repeat 0 0;
+            color: white;
+          }
+        }
+    }
+
+    .controlsContainer {
+      width: 300px;
+      min-height: 50px;
+      margin: 20px auto;
+    }
+}
+
+.homePage {
+  height: 100%;
+  text-align: center;
+  color: #f3f3f5;
+
+  .homeSectionOne {
+    padding: 9% 12% 20%;
+    background: url("../img/backgrounds/old_mathematics.png") repeat top;
+
+    h1 {
+      text-shadow: 2px 2px 1px #989898;
+      color: #ffffff;
+    }
+
+    h2 {
+      text-shadow: 1px 2px 1px #989898;
+      color: green;
+      @include fHeader(1.335em, 'normal', '10px 0', '0');
+      letter-spacing: 4px;
+    }
+
+    p {
+      @include fText(Arial, 1em, 'normal', #333333);
+      color: #232323;
+      line-height: 1.55em;
+    }
+  }
+
+  .homeSectionTwo {
+    padding: 9% 12% 20%;
+    background: #17151c;
+    box-shadow: 0 60px 40px -40px #131115 inset;
+
+    h1 {
+      color: #ff5621;
+    }
+
+    h2, h3 {
+      color: #5F5A6E;
+      letter-spacing: 4px;
+      width: 50%;
+      margin: 0 auto 10%;
+    }
+
+    h3 {
+        letter-spacing: 1px;
+        font-size: 1.45em;
+        width: 100%;
+    }
+
+    .categoryThumbnail {
+      border: 1px solid #5f5a6e;
+        margin-bottom: 12px;
+        padding: 20px;
+        text-align: center;
+        img {
+          width: 125px;
+          height: auto;
+          margin: 8px 4px;
+        }
+    }
+  }
+}
+
+.referencedSVGObject {
+    display: none;
+}
+
+
+
+
+rect {
+  @include tTransition();
+  /* &:hover {
+    @include tTransition();
+    color: black;
+    background-color: white;
+    cursor: pointer;
+      fill: #333;
+    fill-opacity: 0.5;
+  } */
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #dadada;
+}
+
+.axis text {
+  padding: 12px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+svg {
+  background-color: #ffffff;
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+  &:not(.active):not(.ctrl) {
+    cursor: crosshair;
+  }
+
+  path {
+    .link {
+      fill: none;
+      stroke: #000;
+      stroke-width: 4px;
+      cursor: default;
+    }
+  }
+}
+
+svg:not(.active):not(.ctrl) path.link {
+  cursor: pointer;
+}
+
+path.link.selected {
+  stroke-dasharray: 10,2;
+}
+
+path.link.dragline {
+  pointer-events: none;
+}
+
+path.link.hidden {
+  stroke-width: 0;
+}
+
+circle {
+  fill: #000;
+  stroke: #000;
+  stroke-width: 1.5px;
+  cursor: pointer;
+  .node {
+    stroke-width: 1.5px;
+    cursor: pointer;
+    .reflexive {
+      stroke: black !important;
+      stroke-width: 2.5px;
+    }
+    .bordered {
+      stroke: red !important;
+      stroke-width: 2.5px;
+      fill: #fff;
+    }
+  }
+}
+
+.arrow {
+  fill: #000;
+  stroke: black;
+  stroke-width: 1.5px;
+}
+
+text {
+  font: 12px sans-serif;
+  pointer-events: none;
+  .id {
+    text-anchor: middle;
+    font-weight: bold;
+  }
+}
+
+.grid .tick{
+  stroke: lightgrey;
+  opacity: 0.7;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+
+/** clock styles **/
+#rim {
+  fill: none;
+  stroke: #999;
+  stroke-width: 3px;
+}
+
+.second-hand {
+  stroke-width: 3;
+}
+
+.minute-hand {
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+.hour-hand {
+  stroke-width: 12;
+  stroke-linecap: round;
+}
+
+.hands-cover {
+  stroke-width: 3;
+  fill: #fff;
+}
+
+.second-tick {
+  stroke-width: 3;
+  fill: #000;
+}
+
+.hour-tick {
+  stroke-width: 8;
+}
+
+.second-label {
+  font-size: 1em;
+}
+
+.hour-label {
+  font-size: 1.55em;
+}
+
+
+
+/** therm styles **/
+rect.thermometer, .domain {
+    stroke-width: 2;
+    stroke: #dadada;
+    fill: #ffffff;
+    fill-opacity: 0;
+}
+
+rect.mercury {
+    stroke-width: 2;
+    stroke: #676767;
+    fill: red;
+}
+
+rect.interactiveTube {
+    fill: red;
+    fill-opacity: 100;
+    /*stroke-width: none;
+    stroke: none;
+    fill: blue;
+    fill-opacity: 0;*/
+}
+
+
+
+
+
+
+
+line {
+  stroke: black;
+  stroke-width: 1px;
+}

@@ -1,0 +1,38 @@
+<div class="row fullWidth" heightsource>
+    <div class="small-12 medium-3 columns leftStatic" highttarget>
+        <figure>
+            <img src="../src/img/icons/temperature.png" alt="Temperature Icon" />
+        </figure>
+        
+        <div class="pageSubNav">
+            <ul class="custom-side-nav" role="navigation" title="Side nav">
+                <li role="menuitem"><a href="#section-1" du-smooth-scroll duration ="1250">Thermometer</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="small-12 medium-9 columns innerMain">
+        <section class="honeycomb" id="section-1">
+            <thermometer>
+                <h1>Temperature <span class="red">Thermometer</span></h1>
+                <div class="row">
+                    <div class="small-12 large-8 columns">
+                        <div class="thermometer" id="thermometer"></div>
+                    </div>
+                    
+                    <div class="small-12 large-4 columns">
+                        <span class="instructions">
+                            Extend or shorten the bar in thermometer to match requested instruction/question text.
+                        </span>
+                        
+                        <div>
+                            Temperature: {{newTemp}}
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </thermometer>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+@media only screen and (min-width: 10em) {
+    .leftStatic {
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 940px)
+{
+    .top-bar, .top-bar-section {
+        ul {
+            li {
+                line-height: 2.8125rem !important;
+                a:not(.button) {
+                    line-height: 2.8125rem !important;
+                }
+                a:not(.button):hover {
+                    line-height: 2.8125rem !important;
+                }
+            }
+        }
+    }
+
+    .top-bar {
+
+        height: 2.8125rem;
+    }
+}

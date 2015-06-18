@@ -1,0 +1,78 @@
+<div class="row fullWidth" heightsource>
+    <div class="small-12 medium-3 columns leftStatic" heightsource>
+
+        <figure>
+            <img src="../src/img/icons/charts.png" alt="Charts Icon" />
+        </figure>
+
+        <div class="pageSubNav">
+            <ul class="custom-side-nav" role="navigation" title="Side nav">
+                <li role="menuitem"><a href="#section-1" du-smooth-scroll duration="1250">Table</a> </li>
+                <li role="menuitem"><a href="#section-2" du-smooth-scroll duration="1250">Pie Chart</a> </li>
+                <li role="menuitem"><a href="#section-3" du-smooth-scroll duration="1250">Box-whisker plot</a> </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="small-12 medium-9 columns innerMain">
+
+        <section class="norwegian" id="section-1">
+            <tablechart>
+                <h1>Charts <span class="red">Table Chart</span></h1>
+
+                <div ng-bind-html="instructions"></div>
+
+               <div class="row">
+                   <div class="small-12 large-9 columns">
+                       <table class="table">
+                           <thead>
+                           <tr>
+                               <th>function</th>
+                               <th data-ng-repeat="label in tableColumns" data-ng-bind-html="label.label"></th>
+                               <!--<th>y - (2x+5)<sup>2</sup></th>-->
+                           </tr>
+                           </thead>
+                           <tbody>
+                           <tr>
+                               <td>linear</td>
+                               <td data-ng-repeat="checkboxes in tableColumns track by $index"><input type="checkbox" data-ng-model="checkboxes.linear" data-ng-change="updateData(checkboxes.linear,$index)" /></td>
+                               <!--<td><input type="checkbox" /></td>-->
+                           </tr>
+                           <tr>
+                               <td>non-linear</td>
+                               <td data-ng-repeat="checkboxes in tableColumns track by $index"><input type="checkbox" data-ng-model="checkboxes.nonlinear" data-ng-change="updateData(checkboxes.nonlinear,$index)" /></td>
+
+                           </tr>
+                           </tbody>
+
+                       </table>
+                   </div>
+
+                   <div class="small-12 large-3 columns">
+                       <div role="button" class="button radius" data-ng-click="checkAnswer()">Check Answer</div>
+                       <div class="answerText">{{answerValue}}</div>
+                   </div>
+               </div>
+
+
+
+
+            </tablechart>
+        </section>
+
+        <section class="honeycomb" id="section-2">
+            <pie-chart>
+                <h1>Charts <span class="red">Pie Chart</span></h1>
+                <div class="pieChart" id="pieChart"></div>
+            </pie-chart>
+        </section>
+
+        <section id="section-3">
+            <box-whisker>
+                <h1>Charts <span class="red">Box Whisker</span></h1>
+
+                <div id="boxWhisker" style="position: relative; width: 974px; height: 624px;"></div>
+            </box-whisker>
+        </section>
+    </div>
+</div>

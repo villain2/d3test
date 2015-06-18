@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Image Drawing and Mapping Tool</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<script src="image_and_mapping_deps.js"></script>
+    <script src="image_and_mapping.js"></script>
+
+	<link href="css/image_and_mapping.css" type="text/html" rel="stylesheet">
+</head>
+
+
+ <body tabindex="-1" data-ng-app="d3test">
+
+    <div class="container-to-grid stick">
+        <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on:large">
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="#/">Image Drawing and Mapping Tool</a></h1>
+                </li>
+                <li class="toggle-topbar menu-icon"><span>Menu</span></li>
+            </ul>
+
+            <section class="top-bar-section" navigation>
+                <ul class="left">
+                    <li class="{{currentPage == 'graphs' ? 'current' : ''}}"><a href="#/graphs" title="Graphs">Graphs</a></li>
+                    <li class="{{currentPage == 'number_lines' ? 'current' : ''}}"><a href="#/number-lines" title="Number Lines">Number Lines</a></li>
+                    <li class="{{currentPage == 'charts' ? 'current' : ''}}"><a href="#/charts" title="Charts">Charts</a></li>
+                    <li class="{{currentPage == 'geometry' ? 'current' : ''}}"><a href="#/geometry" title="Geometry">Geometry</a></li>
+                    <li class="{{currentPage == 'time' ? 'current' : ''}}"><a href="#/time" title="Time">Time</a></li>
+                    <li class="{{currentPage == 'temperature' ? 'current' : ''}}"><a href="#/temperature" title="Temperature">Temperature</a></li>
+                    <li class="{{currentPage == 'fractions' ? 'current' : ''}}"><a href="#/fractions" title="Fractions">Fractions</a></li>
+                    <!--<li class="{{currentPage == 'probability' ? 'current' : ''}}"><a href="#/probability" title="Probability">Probability</a></li>-->
+                </ul>
+            </section>
+        </nav>
+    </div>
+	<div class="mainContainer" id="mainContainer">
+		<div id="d3test" data-ng-view></div>
+	</div>
+
+    <script>
+        $(document).foundation();
+    </script>
+     
+     <script type="text/javascript" src="http://10.3.17.158:8080/s/d41d8cd98f00b204e9800998ecf8427e/en_US-gy6a86-1988229788/6260/5/1.4.7/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?collectorId=3e5300ae"></script>
+</body>
+</html>

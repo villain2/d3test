@@ -1,0 +1,73 @@
+<div class="row fullWidth">
+    <div class="small-12 medium-3 columns leftStatic" heighttarget>
+
+        <figure>
+            <img src="../src/img/icons/geometry.png" alt="Geometry Icon" />
+        </figure>
+
+        <div class="pageSubNav">
+            <ul class="custom-side-nav" role="navigation" title="Side Nav">
+                <li role="menuitem"><a href="#section-1" du-smooth-scroll duration="1250">Shapes</a> </li>
+                <li role="menuitem"><a href="#section-2" du-smooth-scroll duration="1250">Circumference</a> </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="small-12 medium-9 columns innerMain">
+        <section id="section-1" class="norwegian">
+            <geometryshapes>
+                <h1>Geometry <span class="red">Shapes</span></h1>
+                <p class="instructions">Click on one of the "draw" buttons to the right to create a shape on the graph.<br>
+                Select a shape by clicking on it and then use the "shrink" and "expand" buttons to resize the shape.<br>
+                Enter a degree (0-360) and then click "Rotate" to rotate the shape.</p>
+
+                <div class="row">
+                    <div class="small-12 medium-6 columns">
+                        <div id="geometryshapes" class="geometryshapes" style=""></div>
+                    </div>
+
+                    <div class="small-12 medium-6 columns">
+                        <div role="button" class="button radius" data-ng-click="drawShape('square')">Draw Square</div>
+                        <div role="button" class="button radius" data-ng-click="drawShape('rect')">Draw Rect</div>
+                        <div role="button" class="button radius" data-ng-click="drawShape('parallelogram')">Draw Parallelogram</div>
+                        <div role="button" class="button radius" data-ng-click="drawShape('trapazoid')">Draw Trapazoid</div>
+                        <div role="button" class="button radius" data-ng-click="drawShape('circle')">Draw Circle</div>
+                        <br />
+                        <div role="button" class="button circle" data-ng-click="resizeGeoObject('shrink')">Shrink</div>
+                        <div role="button" class="button circle" data-ng-click="resizeGeoObject('expand')">Expand</div>
+
+                        <br />
+                        <p class="instruction">Transform a shape by turning a given set of degrees.</p>
+                        <input type="number" min="0" max="360" name="degrees" placeholder="degrees" data-ng-model="objDegrees">
+                        <div role="button" class="button" data-ng-click="rotateGeoObject()">Rotate</div>
+                    </div>
+                </div>
+            </geometryshapes>
+        </section>
+
+        <section id="section-2" class="honeycomb">
+            <geometrycirc>
+                <h1>Geometry <span class="red">Circles</span></h1>
+
+                <div class="row">
+                    <div class="small-12 medium-8 columns">
+                        <div id="geometrycirc" class="geometrycirc"></div>
+                    </div>
+
+                    <div class="small-12 medium-4 columns">
+                        <p class="instructions">Choose a different radio button to find radians, degress, sin and cos values.</p>
+                        <div class="labelType" style="position:absolute; margin-top: 30px">
+                            <input type="radio" name="labelType" value="0" checked="checked">Radians<br>
+                            <input type="radio" name="labelType" value="1">Degrees<br>
+                            <input type="radio" name="labelType" value="2">Sin<br>
+                            <input type="radio" name="labelType" value="3">Cos<br>
+
+                            <script>console.log(decodeURI('%CF%80'));
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </geometrycirc>
+        </section>
+    </div>
+</div>
